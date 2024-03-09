@@ -90,7 +90,7 @@ params:
   #   secondaryTextColor:
      backgroundColor: white
   #   secondaryBackgroundColor:
-  #   primaryColor:
+     primaryColor: sienna
   #   secondaryColor:
 
   #   darkmode:
