@@ -32,7 +32,7 @@ Menus:
     - identifier: gallery
       name: Resume
       title: Blog posts
-      url: http://localhost:1313/Pranav_Bhendawade_resume.pdf
+      url: https://panu2306.github.io/Pranav_Bhendawade_resume.pdf
       weight: 2
     #Dropdown menu
     # - identifier: dropdown
@@ -127,7 +127,7 @@ params:
     title: "Pranav Bhendawade"
     subtitle: ""
     content: "I'm a passionate Software Engineer with a strong focus on the Cloud and Distributed computing. I specialize in Python, Cloud technologies (AWS, GCP), Containerization (Docker, Kubernetes), Infrastructure as Code (Terraform, Puppet), and Observability (Prometheus, Grafana)."
-    image: /images/me.jpeg
+    image: /images/me.png
     bottomImage:
       enable: false
     roundImage: true # Make hero image circular | default false
@@ -317,7 +317,7 @@ params:
 
       - title: Restaurant Finder App
         content: "The restaurant finder application is a comprehensive tool designed to streamline the process of discovering restaurants based on various search criteria, including name, location, or zip code."
-        image: /images/projects/restaurant_finder.png
+        image: /images/projects/restuarant_finder.png
         # featured:
         #   name: Demo
         #   link: https://django-converter.herokuapp.com
