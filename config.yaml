@@ -1,0 +1,384 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Home"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    # - identifier: blog
+    #   name: Blog
+    #   title: Blog posts
+    #   url: /blogs
+    #   weight: 1
+    - identifier: gallery
+      name: Resume
+      title: Blog posts
+      url: http://localhost:1313/Pranav_Bhendawade_resume.pdf
+      weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: ""
+  description: Text about my cool site
+  # staticPath: ""  # The path to serve the static files from
+  #favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  color:
+  #   textColor: 
+  #   secondaryTextColor:
+     backgroundColor: white
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    #brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Pranav Bhendawade"
+    subtitle: ""
+    content: "I'm a passionate Software Engineer with a strong focus on the Cloud and Distributed computing. I specialize in Python, Cloud technologies (AWS, GCP), Containerization (Docker, Kubernetes), Infrastructure as Code (Terraform, Puppet), and Observability (Prometheus, Grafana)."
+    image: /images/me.jpeg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "http://localhost:1313/Pranav_Bhendawade_resume.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/pranav-bh/
+        - icon: fab fa-github
+          url: https://github.com/panu2306
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |- 
+       I'm a passionate software engineer with a strong focus on the cloud and distributed computing. 
+       I'm excited to leverage my experience in building and deploying innovative cloud solutions to improve operational efficiency through automation and scalable architectures. 
+       Throughout my career, I've tackled diverse challenges, from crafting dynamic configuration systems to managing robust cloud environments, contributing to the success of organizations like Activision Blizzard, Tata Consultancy Services, and CloudYuga Technologies.
+    skills:
+      enable: true
+      title: "Here are domains I am interested working in:"
+      items:
+        - "Cloud Computing"
+        - "Software Development"
+        - "Backend Engineering"
+        - "Site Reliability Engineering"
+        
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Software Engineer Intern, Linux Systems"
+        company: "Activision Bizzard"
+        companyUrl: "https://www.blizzard.com/en-us/"
+        date: "June 2023 - September 2023"
+        # featuredLink:
+        #   enable: true
+        #   name: "View the project"
+        #   url: "https://example.com"
+        #content: "I worked as a Software Engineer Intern, Linux Systems for 3 months in Activision Blizzard."
+        content: | 
+          - Created a ’Dynamic Configuration Management System’ to retrieve configuration data from multiple data sources such as GitHub repositories and API endpoints, resulting in a 40% increase in accuracy.
+          - Leveraged Docker Compose to containerize the application into micro-services such as the ’Document Generator Service’ and ’Nginx Server’, achieving a 75% reduction in deployment and scaling time.
+          - Designed and implemented Puppet and Terraform scripts to deploy the application on the OpenStack platform, leading to a 90% reduction in provisioning and configuration management time.
+          - Tech Stack: Python, Bash Scripting, Docker, Puppet, Terraform, Nginx, OpenStack Private Cloud
+
+      - job: "Cloud Engineer"
+        company: "Tata Consultancy Services"
+        companyUrl: "https://www.tcs.com/"
+        date: "July 2019 - August 2022"
+        # featuredLink:
+        #   enable: true
+        #   url: "https://example.com"
+        # info:
+        #   enable: true
+        #   content: I worked as a cloud engineer for more than 3 years in Tata Consultancy Services.
+        content: |
+          - Built microservices from scratch to migrate workflows of various processes of Transportation Management System (TMS) using the Python RESTful APIs to automate the manual functionalities in TMS by 70%.
+          - Orchestrated the deployment of containerized microservices using AWS Elastic Kubernetes Service, achieving a comprehensive 50% improvement across system scalability, reliability, and security metrics.
+          - Re-engineered the TMS CI/CD pipeline, leveraging Jenkins pipelines for end-to-end automation to result in a streamlined workflow and reduced downtime to below 1%.
+          - Enhanced system reliability by 45% through the establishment of observability for AWS cloud infrastructure to enable identification and resolution of potential issues.
+          - Automated key processes with Python and Bash scripts, boosting efficiency by 20% and building critical system components.
+          - Tech Stack: Python, AWS (EC2, Lambda, EKS, S3, ALB, RDS, Route53, DynamoDB, CloudWatch), Kubernetes, Prometheus, Grafana
+
+      - job: "Software Development Engineer Intern"
+        company: "CloudYuga Technologies"
+        companyUrl: "https://cloudyuga.guru/"
+        date: "December 2018 - May 2019"
+        # featuredLink:
+        #   enable: true
+        #   url: "https://example.com"
+        content: |
+          - Developed 'Users’ Dashboard' using the Ruby on Rails framework for displaying course and assignment progress.  
+          - Programmed a 'Course Quiz Feature,' which converted question templates written in YAML in real-time to display them on the course quiz page to reduce manual questions & answers feeding almost to 0.  
+          - Configured Terraform scripts for setting up cloud resources on Google Cloud Platform (GCP) to reduce manual cluster provisioning work by 80%.
+          - Tech Stack: Ruby on Rails, ReactJS, Terraform, GitHub Actions, Google Cloud Platform (GCP)
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Master of Science in Computer Science and Engineering"
+        school:
+          name: "Santa Clara University, California"
+          url: "https://www.scu.edu/engineering/academic-programs/department-of-computer-engineering/"
+        date: "2022 - 2024"
+        GPA: "3.7 out of 4.0"
+        content: |-
+          Courses Taken - 
+            - Distributed Systems
+            - Cloud Computing 
+            - Directed Research - Microservices: Performance Analysis and Optimization
+            - Advanced Operating Systems
+            - Design and Analysis of Algorithms 
+            - Machine Learning 
+            - Computer Networking 
+            - Object Oriented Analysis, Design and Programming
+            - Computer Architecture
+            - Operating Systems
+            - Cryptology
+      - title: "Bachelor of Technology in Computer Science and Engineering"
+        school:
+          name: "Shivaji University, India"
+          url: "https://example.org"
+        date: "2015 - 2019"
+        GPA: "3.56 out of 4.0"
+        content: |-
+          Courses Taken - 
+            - Cloud Computing 
+            - Operating Systems
+            - Compiler Design
+            - Data Structures
+            - C++ Programming
+            - Java Programming
+            - Design and Analysis of Algorithms 
+            - Computer Networking 
+            - Object Oriented Analysis, Design and Programming
+            - Computer Organization
+            - Linux Operating System
+        # featuredLink:
+        #   enable: true
+        #   name: "My academic record"
+        #   url: "https://example.com"
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Certified Kubernetes Administrator (CKA)
+        content: Cloud Native Computing Foundation (CNCF)
+        url: https://www.credly.com/badges/5922fa6c-86e9-40e0-9147-3eaa95d43e92/linked_in_profile
+        image: /images/achievements/cka.png
+      - title: AWS Certified Developer Associate
+        content: Amazon Web Services (AWS) 
+        image: /images/achievements/aws.png
+      - title: RedHat Certified System Administrator (RHCSA)
+        content: Red Hat
+        url: "https://drive.google.com/file/d/1tCE0-EGmaA3CM3mYFZW2r6-lIkf6hlR8/view?usp=drive_link"
+        image: /images/achievements/RHCSA.png
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Job Notification System
+        content: The project provides a revolutionizing way for job seekers to connect with employers, Job Notification System leverages distributed systems algorithms and a cutting-edge publisher-subscriber model for efficient and personalized job notifications.
+        image: /images/projects/job_notification_system.png
+        # featured:
+        #   name: Demo
+        #   link: https://github.com/panu2306/job-notification-system
+        badges:
+          - "Java"
+          - "AWS"
+          - "Contanerization"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/panu2306/job-notification-system
+
+      - title: System and OS Virtualization
+        content: "The project analyzes QEMU system virtualization and OS virtualization (Docker), using CPU and FILE-IO benchmarks. Findings revealed Docker outperforms QEMU in efficiency and resource utilization, offering a performance-optimized environments."
+        image: /images/projects/system-os-virtualisation.png
+        # featured:
+        #   name: Demo V2
+        #   link: https://hugo-profile-2.netlify.app
+        badges:
+          - "Docker"
+          - "Linux"
+          - "Sysbench"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/panu2306/cloud-computing-course/tree/main/homeworks/hw1
+
+      - title: Restaurant Finder App
+        content: "The restaurant finder application is a comprehensive tool designed to streamline the process of discovering restaurants based on various search criteria, including name, location, or zip code."
+        image: /images/projects/restaurant_finder.png
+        # featured:
+        #   name: Demo
+        #   link: https://django-converter.herokuapp.com
+        badges:
+          - "Java"
+          - "React"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/panu2306/restaurant-finder-app
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: Email Me - pranavbhendawade@gmail.com
+    email: pranavbhendawade@gmail.com
+    # btnName: Mail me
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/panu2306
+      linkedin: https://www.linkedin.com/in/pranav-bh/
+      stack-overflow: https://stackoverflow.com/users/12552274/pranav-bhendawade
+      medium: https://medium.com/@pranavbhendawade
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
