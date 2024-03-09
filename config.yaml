@@ -123,14 +123,14 @@ params:
   # Hero
   hero:
     enable: true
-    intro: "Hi, my name is"
+    intro: "Hi, I am"
     title: "Pranav Bhendawade"
     subtitle: ""
     content: "I'm a passionate Software Engineer with a strong focus on the Cloud and Distributed computing. I specialize in Python, Cloud technologies (AWS, GCP), Containerization (Docker, Kubernetes), Infrastructure as Code (Terraform, Puppet), and Observability (Prometheus, Grafana)."
     image: /images/me.jpeg
     bottomImage:
-      enable: true
-    # roundImage: true # Make hero image circular | default false
+      enable: false
+    roundImage: true # Make hero image circular | default false
     button:
       enable: true
       name: "Resume"
@@ -151,7 +151,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
+    #image: "/images/me.png"
     content: |- 
        I'm a passionate software engineer with a strong focus on the cloud and distributed computing. 
        I'm excited to leverage my experience in building and deploying innovative cloud solutions to improve operational efficiency through automation and scalable architectures. 
