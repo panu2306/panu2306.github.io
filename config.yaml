@@ -1,6 +1,6 @@
 baseURL: "https://hugo-profile.netlify.app"
 languageCode: "en-us"
-title: "Home"
+title: "Pranav Bhendawade"
 theme: hugo-profile
 
 outputs:
@@ -134,7 +134,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "http://localhost:1313/Pranav_Bhendawade_resume.pdf"
+      url: "https://panu2306.github.io/Pranav_Bhendawade_resume.pdf"
       download: true
       newPage: false
     socialLinks:
@@ -367,18 +367,18 @@ params:
     scrollprogress:
       enable: true
 
-  # For translations
-  terms:
-    read: "Read"
-    toc: "Table Of Contents"
-    copyright: "All rights reserved"
-    pageNotFound: "Page not found"
-    emailText: "Check out this site"
+  # # For translations
+  # terms:
+  #   read: "Read"
+  #   toc: "Table Of Contents"
+  #   copyright: "All rights reserved"
+  #   pageNotFound: "Page not found"
+  #   emailText: "Check out this site"
 
-  datesFormat:
-    article: "Jan 2, 2006"
-    articleList: "Jan 2, 2006"
-    articleRecent: "Jan 2, 2006"
+  # datesFormat:
+  #   article: "Jan 2, 2006"
+  #   articleList: "Jan 2, 2006"
+  #   articleRecent: "Jan 2, 2006"
 
   #customScripts: -| # You can add custom scripts which will be added before </body> tag
   #  <script type="text/javascript"><!-- any script here --></script>
