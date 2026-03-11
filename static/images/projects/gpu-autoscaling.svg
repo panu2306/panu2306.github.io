@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="1" fill="rgba(56,189,248,0.08)"/>
+  </pattern>
+  <rect width="800" height="420" fill="url(#dots)"/>
+
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="3" fill="url(#accent)"/>
+
+  <!-- Terminal window -->
+  <rect x="40" y="40" width="460" height="340" rx="10" fill="#0f172a" stroke="rgba(56,189,248,0.2)" stroke-width="1"/>
+  <!-- Terminal titlebar -->
+  <rect x="40" y="40" width="460" height="32" rx="10" fill="#1e293b"/>
+  <rect x="40" y="58" width="460" height="14" fill="#1e293b"/>
+  <circle cx="62" cy="56" r="5" fill="#ff5f57"/>
+  <circle cx="80" cy="56" r="5" fill="#ffbd2e"/>
+  <circle cx="98" cy="56" r="5" fill="#28ca41"/>
+  <text x="200" y="61" font-family="JetBrains Mono, monospace" font-size="11" fill="#64748b">kubectl get nodes --show-labels</text>
+
+  <!-- Terminal content -->
+  <text x="56" y="100" font-family="JetBrains Mono, monospace" font-size="11" fill="#94a3b8">NAME</text>
+  <text x="180" y="100" font-family="JetBrains Mono, monospace" font-size="11" fill="#94a3b8">STATUS</text>
+  <text x="280" y="100" font-family="JetBrains Mono, monospace" font-size="11" fill="#94a3b8">ROLES</text>
+  <text x="380" y="100" font-family="JetBrains Mono, monospace" font-size="11" fill="#94a3b8">GPU</text>
+
+  <line x1="56" y1="106" x2="480" y2="106" stroke="rgba(56,189,248,0.15)" stroke-width="1"/>
+
+  <text x="56" y="122" font-family="JetBrains Mono, monospace" font-size="11" fill="#e2e8f0">gpu-node-1</text>
+  <text x="180" y="122" font-family="JetBrains Mono, monospace" font-size="11" fill="#28ca41">Ready</text>
+  <text x="280" y="122" font-family="JetBrains Mono, monospace" font-size="11" fill="#818cf8">worker</text>
+  <text x="380" y="122" font-family="JetBrains Mono, monospace" font-size="11" fill="#38bdf8">nvidia.com/gpu=4</text>
+
+  <text x="56" y="142" font-family="JetBrains Mono, monospace" font-size="11" fill="#e2e8f0">gpu-node-2</text>
+  <text x="180" y="142" font-family="JetBrains Mono, monospace" font-size="11" fill="#28ca41">Ready</text>
+  <text x="280" y="142" font-family="JetBrains Mono, monospace" font-size="11" fill="#818cf8">worker</text>
+  <text x="380" y="142" font-family="JetBrains Mono, monospace" font-size="11" fill="#38bdf8">nvidia.com/gpu=4</text>
+
+  <text x="56" y="162" font-family="JetBrains Mono, monospace" font-size="11" fill="#64748b">gpu-node-3</text>
+  <text x="180" y="162" font-family="JetBrains Mono, monospace" font-size="11" fill="#ffbd2e">Pending</text>
+  <text x="280" y="162" font-family="JetBrains Mono, monospace" font-size="11" fill="#818cf8">worker</text>
+  <text x="380" y="162" font-family="JetBrains Mono, monospace" font-size="11" fill="#38bdf8">nvidia.com/gpu=8</text>
+
+  <text x="56" y="195" font-family="JetBrains Mono, monospace" font-size="11" fill="#64748b">$ keda scaledobject status</text>
+  <text x="56" y="215" font-family="JetBrains Mono, monospace" font-size="11" fill="#38bdf8">✓ gpu-inference-scaler</text>
+  <text x="230" y="215" font-family="JetBrains Mono, monospace" font-size="11" fill="#28ca41">Active</text>
+  <text x="56" y="235" font-family="JetBrains Mono, monospace" font-size="11" fill="#94a3b8">  trigger: gpu-utilization  threshold: 70%</text>
+  <text x="56" y="255" font-family="JetBrains Mono, monospace" font-size="11" fill="#94a3b8">  current: 84%  replicas: 3→6</text>
+
+  <text x="56" y="285" font-family="JetBrains Mono, monospace" font-size="11" fill="#64748b">$ helm status karpenter -n kube-system</text>
+  <text x="56" y="305" font-family="JetBrains Mono, monospace" font-size="11" fill="#38bdf8">STATUS: deployed</text>
+  <text x="56" y="325" font-family="JetBrains Mono, monospace" font-size="11" fill="#94a3b8">  nodes provisioned: 12  cost saved: 34%</text>
+
+  <!-- Cursor -->
+  <rect x="56" y="348" width="8" height="14" fill="#38bdf8" opacity="0.8"/>
+
+  <!-- Right panel - metrics -->
+  <rect x="530" y="40" width="230" height="160" rx="8" fill="#0f172a" stroke="rgba(56,189,248,0.2)" stroke-width="1"/>
+  <text x="548" y="64" font-family="JetBrains Mono, monospace" font-size="10" fill="#64748b">GPU UTILIZATION</text>
+  <!-- Bar chart -->
+  <rect x="548" y="130" width="18" height="40" rx="2" fill="rgba(56,189,248,0.3)"/>
+  <rect x="572" y="110" width="18" height="60" rx="2" fill="rgba(56,189,248,0.5)"/>
+  <rect x="596" y="90" width="18" height="80" rx="2" fill="rgba(56,189,248,0.7)"/>
+  <rect x="620" y="75" width="18" height="95" rx="2" fill="url(#accent)"/>
+  <rect x="644" y="80" width="18" height="90" rx="2" fill="url(#accent)"/>
+  <rect x="668" y="68" width="18" height="102" rx="2" fill="url(#accent)" filter="url(#glow)"/>
+  <rect x="692" y="72" width="18" height="98" rx="2" fill="url(#accent)"/>
+  <text x="548" y="185" font-family="JetBrains Mono, monospace" font-size="10" fill="#38bdf8">avg: 84%  peak: 97%</text>
+
+  <rect x="530" y="215" width="230" height="80" rx="8" fill="#0f172a" stroke="rgba(56,189,248,0.2)" stroke-width="1"/>
+  <text x="548" y="238" font-family="JetBrains Mono, monospace" font-size="10" fill="#64748b">KARPENTER NODES</text>
+  <text x="548" y="262" font-family="JetBrains Mono, monospace" font-size="22" font-weight="bold" fill="#38bdf8" filter="url(#glow)">12</text>
+  <text x="590" y="262" font-family="JetBrains Mono, monospace" font-size="11" fill="#28ca41"> ↑ autoscaled</text>
+  <text x="548" y="284" font-family="JetBrains Mono, monospace" font-size="10" fill="#94a3b8">cost reduction: 34%</text>
+
+  <rect x="530" y="310" width="230" height="70" rx="8" fill="#0f172a" stroke="rgba(56,189,248,0.2)" stroke-width="1"/>
+  <text x="548" y="333" font-family="JetBrains Mono, monospace" font-size="10" fill="#64748b">ACTIVE WORKLOADS</text>
+  <text x="548" y="358" font-family="JetBrains Mono, monospace" font-size="11" fill="#e2e8f0">vLLM · PyTorch · TGI</text>
+  <text x="548" y="374" font-family="JetBrains Mono, monospace" font-size="10" fill="#818cf8">inference pods: 6/6 running</text>
+
+  <!-- Title -->
+  <text x="40" y="405" font-family="JetBrains Mono, monospace" font-size="12" fill="#64748b">GPU-Aware Autoscaling Platform · EKS + Karpenter + KEDA</text>
+</svg>

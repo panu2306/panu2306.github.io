@@ -1,0 +1,63 @@
+{{ if .Site.Params.hero.enable | default false }}
+<section id="hero" class="py-0">
+    <div class="container hero-container">
+        <div class="row align-items-center min-vh-100 py-5">
+
+            <!-- Left: content -->
+            <div class="col-lg-7 col-md-12 hero-content-col {{ if .Site.Params.animate }}animate{{ end }}">
+
+                <!-- Currently at badge -->
+                <div class="hero-current-badge mb-3">
+                    <span class="hero-pulse-dot"></span>
+                    Currently at <strong>Automation Anywhere</strong>
+                </div>
+
+                <!-- Name -->
+                <h1 class="hero-name">{{ .Site.Params.hero.title }}</h1>
+
+                <!-- Typewriter subtitle -->
+                <h3 class="hero-subtitle mb-3">{{ .Site.Params.hero.subtitle }}</h3>
+
+                <!-- Description -->
+                <p class="hero-desc">{{ .Site.Params.hero.content | markdownify }}</p>
+
+                <!-- Buttons + social -->
+                <div class="d-flex flex-wrap align-items-center gap-3 mt-4">
+                    {{ if .Site.Params.hero.button.enable }}
+                    <a href="{{ .Site.Params.hero.button.url }}"
+                       class="hero-resume-btn"
+                       {{ if .Site.Params.hero.button.download }}download{{ end }}
+                       {{ if not .Site.Params.hero.button.newPage }}{{ else }}target="_blank"{{ end }}>
+                        <i class="fas fa-file-alt me-2"></i>{{ .Site.Params.hero.button.name }}
+                    </a>
+                    {{ end }}
+                    {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
+                    <a href="{{ .url }}" target="_blank" class="hero-social-btn">
+                        <i class="{{ .icon }}"></i>
+                    </a>
+                    {{ end }}
+                </div>
+
+                <!-- Location + email -->
+                <div class="hero-meta mt-4">
+                    <span class="hero-meta-item">
+                        <i class="fas fa-map-marker-alt"></i> Santa Clara, CA
+                    </span>
+                    <span class="hero-meta-item">
+                        <i class="fas fa-envelope"></i> pranavbhendawade@gmail.com
+                    </span>
+                </div>
+            </div>
+
+            <!-- Right: image -->
+            <div class="col-lg-5 col-md-8 col-sm-10 mx-auto mx-lg-0 mt-5 mt-lg-0 d-flex justify-content-center">
+                <div class="hero-img-wrap {{ if .Site.Params.animate }}animate{{ end }}">
+                    <img src="{{ .Site.Params.hero.image }}" alt="{{ .Site.Params.hero.title }}"
+                         class="hero-img{{ if .Site.Params.hero.roundImage }} rounded-circle{{ end }}">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{{ end }}

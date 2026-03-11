@@ -1,0 +1,42 @@
+{{ if .Site.Params.projects.enable | default false }}
+<section id="projects" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ .Site.Params.projects.title | default "Projects" }}</h3>
+        <div class="row justify-content-center px-3 px-md-5 mt-2">
+            {{ range .Site.Params.projects.items }}
+            <div class="col-lg-4 col-md-6 my-3 d-flex">
+                <div class="card project-card w-100" title="{{ .title }}">
+                    <!-- Header: folder icon + links -->
+                    <div class="d-flex justify-content-between align-items-center px-3 pt-3 pb-0 bg-transparent">
+                        <i class="fas fa-folder-open project-folder-icon"></i>
+                        <div class="d-flex project-links">
+                            {{ range .links }}
+                            <a href="{{ .url }}" target="_blank" class="project-icon-link" title="GitHub">
+                                <i class="{{ .icon }}"></i>
+                            </a>
+                            {{ end }}
+                            {{ if .featured }}
+                            <a href="{{ .featured.link }}" target="_blank" class="project-icon-link" title="{{ .featured.name }}">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <!-- Body -->
+                    <div class="card-body bg-transparent px-3 pt-2 pb-0 d-flex flex-column">
+                        <h5 class="project-title bg-transparent mb-2">{{ .title }}</h5>
+                        <p class="project-desc bg-transparent flex-grow-1">{{ .content }}</p>
+                    </div>
+                    <!-- Footer: badges -->
+                    <div class="px-3 pb-3 bg-transparent">
+                        {{ range .badges }}
+                        <span class="badge badge-secondary me-1 mb-1">{{ . }}</span>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

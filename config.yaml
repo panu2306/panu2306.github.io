@@ -54,9 +54,9 @@ Menus:
 
 params:
   title: ""
-  description: Text about my cool site
+  description: "Cloud & Platform Engineer specializing in Kubernetes, Terraform, and AI/ML infrastructure. Building scalable distributed systems on AWS and GCP."
   # staticPath: ""  # The path to serve the static files from
-  #favicon: "/fav.png"
+  favicon: "/fav.svg"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -223,7 +223,7 @@ params:
       - title: "Master of Science in Computer Science and Engineering"
         school:
           name: "Santa Clara University, California"
-          url: "https://www.scu.edu/engineering/academic-programs/department-of-computer-engineering/"
+          url: "https://www.scu.edu/"
         date: "2022 - 2024"
         GPA: "3.7 out of 4.0"
         content: |-
@@ -242,7 +242,7 @@ params:
       - title: "Bachelor of Technology in Computer Science and Engineering"
         school:
           name: "Shivaji University, India"
-          url: "https://example.org"
+          url: "https://shivajiuniversity.org/"
         date: "2015 - 2019"
         GPA: "3.56 out of 4.0"
         content: |-
@@ -277,6 +277,7 @@ params:
         image: /images/achievements/aws.png
       - title: HashiCorp Terraform Associate
         content: HashiCorp
+        url: https://www.credly.com/badges/ea4c84ae-5ec1-49ac-88bf-d69e4d08302c/linked_in_profile
         image: /images/achievements/terraform.png
       - title: RedHat Certified System Administrator (RHCSA)
         content: Red Hat
@@ -290,7 +291,7 @@ params:
     items:
       - title: GPU-Aware Autoscaling Platform on EKS
         content: Built a GPU workload orchestration platform on EKS using Karpenter for node provisioning and KEDA for event-driven autoscaling based on GPU utilization and queue-depth metrics. Instrumented Prometheus and Grafana to track GPU memory, utilization, and job throughput with self-service dashboards for ML platform consumers.
-        image: /images/projects/job_notification_system.png
+        image: /images/projects/gpu-autoscaling.svg
         badges:
           - "Kubernetes"
           - "Karpenter"
@@ -357,7 +358,7 @@ params:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: true
+      enable: false
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/panu2306
@@ -390,5 +391,9 @@ params:
   #   articleList: "Jan 2, 2006"
   #   articleRecent: "Jan 2, 2006"
 
-  #customScripts: -| # You can add custom scripts which will be added before </body> tag
-  #  <script type="text/javascript"><!-- any script here --></script>
+  customScripts: |
+    <script>
+    // Console easter egg
+    console.log('%c👋 Hey, curious one!', 'color:#38bdf8;font-size:18px;font-weight:bold;');
+    console.log('%cPranav builds infra that scales silently and fails loudly.\nReach out: pranavbhendawade@gmail.com', 'color:#94a3b8;font-size:13px;');
+    </script>

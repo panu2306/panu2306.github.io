@@ -1,0 +1,37 @@
+{{ if .Site.Params.education.enable | default false }}
+<section id="education" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ .Site.Params.education.title | default "Education" }}</h3>
+        <div class="edu-timeline mt-5">
+            {{ range .Site.Params.education.items }}
+            <div class="edu-item">
+                <!-- Timeline dot -->
+                <div class="edu-dot">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <!-- Card -->
+                <div class="edu-card">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start mb-1">
+                        <h5 class="edu-degree mb-0">{{ .title }}</h5>
+                        <span class="edu-date">{{ .date }}</span>
+                    </div>
+
+                    {{ if .school.url }}
+                    <a href="{{ .school.url }}" target="_blank" class="edu-school">
+                        {{ .school.name }} <i class="fas fa-external-link-alt" style="font-size:0.65rem; opacity:0.6;"></i>
+                    </a>
+                    {{ else }}
+                    <div class="edu-school">{{ .school.name }}</div>
+                    {{ end }}
+
+                    {{ if .GPA }}
+                    <span class="edu-gpa mt-2 d-inline-block">GPA {{ .GPA }}</span>
+                    {{ end }}
+
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

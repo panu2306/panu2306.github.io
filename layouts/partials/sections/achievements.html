@@ -1,0 +1,43 @@
+{{ if .Site.Params.achievements.enable | default false }}
+<section id="achievements" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ .Site.Params.achievements.title | default "Achievements" }}</h3>
+        <div class="row justify-content-center px-3 px-md-4 mt-2">
+            {{ range .Site.Params.achievements.items }}
+            <div class="col-lg-6 col-md-6 my-2">
+                {{ if .url }}
+                <a class="card achievement-card p-3 h-100 text-decoration-none" href="{{ .url }}" title="{{ .title }}" target="_blank">
+                    <div class="d-flex align-items-center gap-3">
+                        {{ if .image }}
+                        <div class="achievement-img-wrap flex-shrink-0">
+                            <img src="{{ .image }}" alt="{{ .title }}" class="achievement-img">
+                        </div>
+                        {{ end }}
+                        <div>
+                            <h5 class="achievement-title mb-1">{{ .title }}</h5>
+                            <div class="achievement-issuer">{{ .content }}</div>
+                            <small class="achievement-link mt-1 d-inline-block">View credential →</small>
+                        </div>
+                    </div>
+                </a>
+                {{ else }}
+                <div class="card achievement-card p-3 h-100" title="{{ .title }}">
+                    <div class="d-flex align-items-center gap-3">
+                        {{ if .image }}
+                        <div class="achievement-img-wrap flex-shrink-0">
+                            <img src="{{ .image }}" alt="{{ .title }}" class="achievement-img">
+                        </div>
+                        {{ end }}
+                        <div>
+                            <h5 class="achievement-title mb-1">{{ .title }}</h5>
+                            <div class="achievement-issuer">{{ .content }}</div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

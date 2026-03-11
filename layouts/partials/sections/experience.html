@@ -1,0 +1,37 @@
+{{ if .Site.Params.experience.enable | default false }}
+<section id="experience" class="py-5">
+    <div class="container">
+        <h3 class="text-center">{{ .Site.Params.experience.title | default "Experience" }}</h3>
+        <div class="exp-timeline mt-5">
+            {{ range .Site.Params.experience.items }}
+            <div class="exp-item">
+                <!-- Timeline dot -->
+                <div class="exp-dot">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <!-- Card -->
+                <div class="exp-card">
+                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-1">
+                        <div>
+                            <h5 class="exp-job mb-0">{{ .job }}</h5>
+                            <a href="{{ .companyUrl }}" target="_blank" class="exp-company">
+                                {{ .company }} <i class="fas fa-external-link-alt" style="font-size:0.6rem; opacity:0.6;"></i>
+                            </a>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 flex-shrink-0">
+                            {{ if strings.Contains .date "Present" }}
+                            <span class="exp-current-badge">Current</span>
+                            {{ end }}
+                            <span class="exp-date">{{ .date }}</span>
+                        </div>
+                    </div>
+                    <div class="exp-content mt-3">
+                        {{ .content | markdownify }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
