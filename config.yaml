@@ -76,7 +76,7 @@ params:
 
   theme:
     # disableThemeToggle: true
-    # defaultTheme: "light" # dark
+    defaultTheme: "dark"
 
   font:
     fontSize: 1rem # default: 1rem
@@ -84,22 +84,24 @@ params:
     lineHeight: 1.5 # default: 1.5
     textAlign: left # default: left
 
+  customCSS: true
+
   # color preference
   color:
-  #   textColor: 
-  #   secondaryTextColor:
-     backgroundColor: white
-  #   secondaryBackgroundColor:
-     primaryColor: sienna
-  #   secondaryColor:
+    textColor: "#0f172a"
+    secondaryTextColor: "#475569"
+    backgroundColor: "#f8fafc"
+    secondaryBackgroundColor: "#e0f2fe"
+    primaryColor: "#0ea5e9"
+    secondaryColor: "#f0f9ff"
 
-  #   darkmode:
-  #     textColor:
-  #     secondaryTextColor:
-  #     backgroundColor:
-  #     secondaryBackgroundColor:
-  #     primaryColor:
-  #     secondaryColor:
+    darkmode:
+      textColor: "#e2e8f0"
+      secondaryTextColor: "#94a3b8"
+      backgroundColor: "#0f172a"
+      secondaryBackgroundColor: "#1e293b"
+      primaryColor: "#38bdf8"
+      secondaryColor: "#1e293b"
 
   # If you want to customize the menu, you can change it here
   navbar:
@@ -130,7 +132,7 @@ params:
     image: /images/me.png
     bottomImage:
       enable: false
-    roundImage: false # Make hero image circular | default false
+    roundImage: true # Make hero image circular | default false
     button:
       enable: true
       name: "Resume"
