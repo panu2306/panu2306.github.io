@@ -24,11 +24,11 @@ markup:
 
 Menus:
   main:
-    # - identifier: blog
-    #   name: Blog
-    #   title: Blog posts
-    #   url: /blogs
-    #   weight: 1
+    - identifier: blog
+      name: Blog
+      title: Blog
+      url: /blogs
+      weight: 1
     - identifier: gallery
       name: Resume
       title: Blog posts
@@ -358,7 +358,7 @@ params:
       path: "blogs"
       count: 3
       title: Recent Posts
-      enable: false
+      enable: true
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/panu2306
