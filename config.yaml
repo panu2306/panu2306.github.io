@@ -128,7 +128,7 @@ params:
     intro: "Hi, I am"
     title: "Pranav Bhendawade"
     subtitle: "Cloud & Platform Engineer"
-    content: "Cloud and Platform Engineer with 5+ years architecting reliable, scalable distributed systems. Deep expertise in Kubernetes on AWS (EKS) and GCP (GKE), Terraform IaC, and GitOps. Expanding into AI/ML infrastructure with hands-on work in GPU scheduling on Kubernetes, vLLM inference serving, and agentic observability tooling."
+    content: "Software Engineer with 5+ years architecting and operating reliable, scalable distributed systems. Expertise in Kubernetes on AWS (EKS) and GCP (GKE), IaC, GitOps, and service mesh networking. Owned services end-to-end: production code, on-call rotations, incident response, and AI-powered operational tooling. Expanding into AI/ML infrastructure — GPU scheduling, vLLM serving, and agentic observability tooling."
     image: /images/me.png
     bottomImage:
       enable: false
@@ -155,19 +155,18 @@ params:
     title: "About Me"
     #image: "/images/me.png"
     content: |-
-       I'm a Cloud and Platform Engineer with 5+ years of experience building reliable, scalable distributed systems across AWS and GCP. Currently at Automation Anywhere, I architect multi-cluster Kubernetes platforms spanning 90+ GKE/EKS clusters, drive GitOps adoption with ArgoCD, and build AI/ML infrastructure for inference workloads.
+       I'm a Software Engineer with 5+ years architecting and operating reliable, scalable distributed systems. Currently at Automation Anywhere, I own services end-to-end: production code, on-call rotations, incident response, and AI-powered operational tooling across 90+ GKE/EKS clusters.
 
        I'm passionate about platform engineering, infrastructure automation, and the intersection of cloud-native systems with AI/ML — from GPU workload orchestration to agentic observability tooling.
     skills:
       enable: true
       title: "Technologies I work with:"
       items:
-        - "Kubernetes · Helm · ArgoCD · Karpenter · KEDA"
-        - "AWS (EKS, EC2, S3, IAM) · GCP (GKE)"
-        - "Terraform · GitOps · Docker · Linux"
-        - "Prometheus · Grafana · OpenTelemetry · Istio"
-        - "Python · Go · Shell Scripting"
-        - "GPU Orchestration · vLLM · AI/ML Infrastructure"
+        - "Python (Proficient) · Shell/Bash · Go · Java · SQL"
+        - "Kubernetes · Helm · ArgoCD · Karpenter · PDB/HPA/VPA · KEDA · Argo Workflows · Docker"
+        - "Terraform · AWS (EKS, EC2, VPC, IAM, RDS, ElastiCache, ALB) · GCP (GKE) · GitOps"
+        - "Prometheus · Grafana · OpenTelemetry · ELK Stack · Istio · Envoy · mTLS · TCP/IP · DNS"
+        - "Redis · PostgreSQL · DynamoDB · GPU orchestration · vLLM · MCP servers · agentic AI"
         
   # Experience
   experience:
@@ -179,31 +178,32 @@ params:
         companyUrl: "https://www.automationanywhere.com/"
         date: "August 2024 - Present"
         content: |
-          - Architected an Istio-based multi-cluster service mesh across 90+ GKE/EKS clusters, securing 100% of cross-cluster service traffic with mTLS and achieving full traffic visibility across application and AI/ML inference workloads.
-          - Standardized infrastructure and application deployments using Helm charts and ArgoCD GitOps workflows across EKS/GKE, cutting deployment time by 40% and manual configuration by 60%.
-          - Optimized compute workload autoscaling using AWS ASGs and GKE node auto-provisioning alongside HPA and VPA, achieving 30–40% infrastructure cost reduction while maintaining high availability across 90+ clusters.
-          - Engineered a two-tier IaC architecture with a GitOps-driven control plane for environment lifecycle and a Terraform infra plane for AWS/GCP provisioning, reducing onboarding time by 70% and eliminating manual configuration drift.
-          - Reduced MTTD by 60% by engineering a Python-based incident response agent using a custom MCP server to autonomously correlate logs, metrics, and events in real time.
-          - Tech Stack: Kubernetes, Helm, ArgoCD, Istio, Terraform, AWS (EKS), GCP (GKE), Python, Prometheus, Grafana
+          - Engineered an Istio service mesh across 90+ production Kubernetes clusters (EKS/GKE) with mTLS, SNI-based routing, and east-west gateways, securing 100% of cross-cluster traffic including AI/ML inference workloads.
+          - Architected a two-tier IaC architecture with a GitOps-driven control plane for environment lifecycle and a Terraform infra plane for AWS/GCP provisioning, reducing onboarding time by 70% and eliminating manual configuration drift.
+          - Standardized Helm charts and ArgoCD GitOps pipelines across 90+ clusters, cutting deployment cycle time by 40% and manual configuration errors by 60%.
+          - Diagnosed production issues (network partitions, DNS failures, pod scheduling, Envoy misconfigs), reducing resolution time by 35% while optimizing fleet-wide autoscaling for 30–40% cost reduction.
+          - Developed a Python-based incident response agent using FastAPI and MCP that autonomously correlates logs, metrics, and K8s events, reducing MTTD by 60% and cutting manual triage across on-call rotations.
+          - Tech Stack: Kubernetes, Helm, ArgoCD, Istio, Terraform, AWS (EKS), GCP (GKE), Python, FastAPI, MCP, Prometheus, Grafana
 
       - job: "Software Engineer Intern, Linux Systems"
         company: "Activision Blizzard"
         companyUrl: "https://www.activision.com/"
         date: "June 2023 - September 2023"
         content: |
-          - Built an infrastructure configuration discovery system aggregating real-time resource data across regions, giving teams accurate platform visibility and reducing deployment misconfigurations by 40%.
-          - Spearheaded full-lifecycle containerization and Kubernetes deployment of the platform, reducing deployment time by 75% and cutting provisioning time by 90% via Terraform on OpenStack.
-          - Tech Stack: Python, Bash Scripting, Docker, Kubernetes, Terraform, Nginx, OpenStack
+          - Constructed an infrastructure configuration discovery service in Python that aggregated real-time resource data across multiple sources, providing accurate platform visibility and reducing deployment misconfigurations by 40%.
+          - Streamlined provisioning of service by containerizing and deploying on Kubernetes with Terraform-provisioned infrastructure on OpenStack, reducing deployment time by 75% and provisioning time by 90%.
+          - Tech Stack: Python, Bash Scripting, Docker, Kubernetes, Terraform, OpenStack
 
       - job: "Cloud Engineer"
         company: "Tata Consultancy Services"
         companyUrl: "https://www.tcs.com/"
         date: "July 2019 - August 2022"
         content: |
-          - Designed AWS VPC networking for EKS across 3 environments with CNI-aware subnet sizing, pod-level security groups, NACLs for isolation, and VPC peering for cross-environment service discovery supporting 100+ node clusters.
-          - Established on-call rotation and runbooks for infrastructure incidents, owning end-to-end resolution and contributing to a 45% MTTR reduction via Prometheus, Grafana, and ELK stack.
-          - Developed Python scripts to automate AWS resource inventory and cost reporting across 20+ regions, reducing manual reporting overhead by 80% and giving teams real-time visibility into resource utilization and monthly spend.
-          - Tech Stack: Python, AWS (EC2, EKS, S3, IAM, CloudWatch, Lambda), Kubernetes, Prometheus, Grafana, ELK
+          - Designed AWS VPC networking for EKS across 3 environments with CNI-aware subnet sizing, pod-level security groups, NACLs, and VPC peering for cross-environment service discovery supporting 100+ node clusters.
+          - Spearheaded on-call rotation and incident escalation for production infrastructure, established runbooks and drove root-cause analysis, contributing to 45% MTTR reduction using Prometheus/Grafana alerting and log analysis.
+          - Automated AWS resource inventory and cost reporting across 20+ regions using Python, reducing manual overhead by 80% with real-time utilization dashboards.
+          - Administered PostgreSQL RDS and ElastiCache Redis serving 15+ production services, tuned parameters and connection pooling for 99.9% uptime. Triaged Linux incidents (OOM kills, network stack, systemd) via strace and tcpdump.
+          - Tech Stack: Python, AWS (EC2, EKS, S3, IAM, RDS, ElastiCache, CloudWatch), Kubernetes, Prometheus, Grafana, ELK
 
       - job: "Software Engineer Intern"
         company: "CloudYuga Technologies"
@@ -290,55 +290,27 @@ params:
     # title: "Custom Name"
     items:
       - title: GPU-Aware Autoscaling Platform on EKS
-        content: Built a GPU workload orchestration platform on EKS using Karpenter for node provisioning and KEDA for event-driven autoscaling based on GPU utilization and queue-depth metrics. Instrumented Prometheus and Grafana to track GPU memory, utilization, and job throughput with self-service dashboards for ML platform consumers.
+        content: Orchestrated GPU workload scheduling on EKS using Karpenter and KEDA for autoscaling on GPU utilization and queue depth, reducing GPU idle time by 40%. Instrumented Prometheus/Grafana dashboards with NVIDIA DCGM metrics for real-time GPU visibility.
         image: /images/projects/gpu-autoscaling.svg
         badges:
           - "Kubernetes"
           - "Karpenter"
           - "KEDA"
           - "Prometheus"
+          - "NVIDIA DCGM"
+          - "Helm"
           - "Terraform"
           - "AWS EKS"
 
-      - title: Distributed Job Notification System
-        content: A distributed job notification platform leveraging a publisher-subscriber model for efficient, personalized job alerts at scale. Containerized and deployed microservices on AWS EKS with persistent storage and horizontal autoscaling for high-frequency job scheduling.
-        image: /images/projects/job_notification_system.png
+      - title: Kubernetes Troubleshooting Agent
+        content: Devised an agentic system triggered by webhooks that uses a FastAPI agent with a custom MCP server to query cluster metrics, logs, and events, cutting incident triage time by 50% and posting root-cause analysis to Slack.
+        image: /images/projects/k8s-troubleshooting-agent.png
         badges:
-          - "Java"
-          - "Spring MVC"
-          - "AWS EKS"
-          - "Docker"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/panu2306/job-notification-system
-
-      - title: System and OS Virtualization
-        content: "The project analyzes QEMU system virtualization and OS virtualization (Docker), using CPU and FILE-IO benchmarks. Findings revealed Docker outperforms QEMU in efficiency and resource utilization, offering a performance-optimized environments."
-        image: /images/projects/system-os-virtualisation.png
-        # featured:
-        #   name: Demo V2
-        #   link: https://hugo-profile-2.netlify.app
-        badges:
-          - "Docker"
-          - "Linux"
-          - "Sysbench"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/panu2306/cloud-computing-course/tree/main/homeworks/hw1
-
-      - title: Restaurant Finder App
-        content: "The restaurant finder application is a comprehensive tool designed to streamline the process of discovering restaurants based on various search criteria, including name, location, or zip code."
-        image: /images/projects/restuarant_finder.png
-        # featured:
-        #   name: Demo
-        #   link: https://django-converter.herokuapp.com
-        badges:
-          - "Java"
-          - "React"
-          - "Bootstrap"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/panu2306/restaurant-finder-app
+          - "Python"
+          - "FastAPI"
+          - "MCP"
+          - "Slack"
+          - "Kubernetes"
 
   #Contact
   contact:
